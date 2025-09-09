@@ -2,6 +2,7 @@ package com.example.practicas
 
 import android.R
 import android.os.Bundle
+import android.renderscript.Sampler
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -61,32 +62,48 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun Greeting() {
         val context= LocalContext.current
-        var texto by remember { mutableStateOf("") }
+        var ValorA by remember { mutableStateOf("") }
+        var ValorB by remember { mutableStateOf("") }
+        var Resultado by remember { mutableStateOf("") }
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ){
-            Row(){
+            Row(Modifier.padding(16.dp)){
                 OutlinedTextField(
-                    value=texto,
-                    label={Text("Nombre")},
-                    onValueChange ={texto=it}
+                    value=ValorA,
+                    label={Text("Valor A")},
+                    onValueChange ={ValorA=it}
+                )
+            }
+            Row(Modifier.padding(16.dp)){
+                OutlinedTextField(
+                    value=ValorB,
+                    label={Text("Valor B")},
+                    onValueChange ={ValorB=it}
                 )
             }
             Row(
                 Modifier.align(Alignment.CenterHorizontally)
             ){
                 OutlinedButton(onClick = { /*TODO*/
-                    Toast.makeText(
-                        context, //val context= LocalContext.current
-                        texto,
-
-                        Toast.LENGTH_LONG
-                    ).show()
+                    val a = ValorA.toInt()
+                    val b = ValorB.toInt()
+                    val c = a+b
+                    Resultado = c.toString()
                 }) {
                     Text(text = "Enviar")
                 }
+            }
+            Row(
+                Modifier.align(Alignment.CenterHorizontally)
+            ){
+                OutlinedTextField(
+                    value=Resultado,
+                    label={Text("Resultado")},
+                    onValueChange ={Resultado=it}
+                )
             }
         }
     }}

@@ -63,7 +63,6 @@ fun Calculadora() {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        // Fila 7, 8, 9, /
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -111,7 +110,6 @@ fun Calculadora() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Fila 4, 5, 6, x
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -159,7 +157,6 @@ fun Calculadora() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Fila 1, 2, 3, -
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -207,7 +204,6 @@ fun Calculadora() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Fila 0, ., =, +
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)
@@ -262,7 +258,6 @@ fun Calculadora() {
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Fila DEL y AC
         Row(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.spacedBy(10.dp)

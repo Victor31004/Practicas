@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -27,6 +28,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.practicas.ui.theme.PracticasTheme
@@ -61,6 +63,10 @@ fun Inicio() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Spacer(modifier = Modifier.padding(70.dp))
+        Row(){
+            Image(painter = painterResource(id=R.drawable.money),
+                contentDescription = null)
+        }
         Column(
             modifier = Modifier.padding(10.dp, 40.dp, 0.dp, 30.dp)
 
@@ -147,7 +153,6 @@ fun Inicio() {
                         }
                     }
 
-                    // Fórmula corregida
                     isr1 = ((salBruto - lInferior) * (porcentaje / 100)) + cuota
                     res = salBruto - isr1
                     isr = isr1.toString()

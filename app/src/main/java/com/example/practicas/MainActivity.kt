@@ -102,7 +102,7 @@ fun Calculadora() {
                 modifier = Modifier.size(80.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Gray,
+                    containerColor = Color.Yellow,
                     contentColor = Color.White
                 )
             ) { Text("/", fontSize = 22.sp) }
@@ -149,7 +149,7 @@ fun Calculadora() {
                 modifier = Modifier.size(80.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Gray,
+                    containerColor = Color.Yellow,
                     contentColor = Color.White
                 )
             ) { Text("x", fontSize = 22.sp) }
@@ -196,7 +196,7 @@ fun Calculadora() {
                 modifier = Modifier.size(80.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Gray,
+                    containerColor = Color.Yellow,
                     contentColor = Color.White
                 )
             ) { Text("-", fontSize = 22.sp) }
@@ -250,7 +250,7 @@ fun Calculadora() {
                 modifier = Modifier.size(80.dp),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Gray,
+                    containerColor = Color.Yellow,
                     contentColor = Color.White
                 )
             ) { Text("+", fontSize = 22.sp) }

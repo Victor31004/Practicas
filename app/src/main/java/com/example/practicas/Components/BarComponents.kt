@@ -12,16 +12,16 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TitleBar (name:String){
+fun TitleBar(name:String){
     Text(text=name, fontSize = (25.sp),
-        color = Color.White)
+        color= Color.White)
 }
 
 @Composable
 fun ActionButton(){
     FloatingActionButton(onClick={},
-        containerColor = Color.Red,
-        contentColor = Color.White
+        containerColor= Color.Red,
+        contentColor= Color.White
     ) {
         Icon(imageVector = Icons.Default.Add,
             contentDescription = "Mas")
@@ -29,11 +29,11 @@ fun ActionButton(){
 }
 
 @Composable
-fun MainIconButton(icon: ImageVector, onClick: () -> Unit){
-    IconButton(onClick = onCLick) {
+fun MainIconButton(icon: ImageVector, onClick: () -> Unit) {
+    IconButton(onClick = onClick) {
         Icon(
             imageVector = icon,
-            contentDescription = "Boton",
+            contentDescription = "Botón",
             tint = Color.White
         )
     }

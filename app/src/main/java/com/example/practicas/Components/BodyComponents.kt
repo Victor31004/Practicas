@@ -1,6 +1,5 @@
 package com.example.practicas.Components
 
-import android.widget.TextView
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Button
@@ -23,11 +22,11 @@ fun TextView(texto:String){
 
 @Composable
 fun Space(espacio:Int){
-    Spacer(modifier = Modifier.height(height = espacio.dp))
+    Spacer(modifier = Modifier.height(espacio.dp))
 }
-
 @Composable
-fun MainButton(name:String,backColor:Color, color: Color,onClick:() -> Unit){
+fun MainButton(name:String,backColor:Color,
+               color: Color,onClick:() -> Unit){
     Button(onClick=onClick,
         colors = ButtonDefaults.buttonColors(
             contentColor = color,

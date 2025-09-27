@@ -66,3 +66,4 @@ fun ContentDetailView(navController: NavController,id: Int) {
         }
     }
 }
+

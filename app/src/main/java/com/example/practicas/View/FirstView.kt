@@ -15,6 +15,10 @@ import com.example.practicas.Components.MainButton
 import com.example.practicas.Components.Space
 import com.example.practicas.Components.TextView
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 
 @Composable
@@ -34,7 +38,9 @@ fun ContentFirstView(navController: NavController){
         MainButton(
             name="Detail View",
             backColor = Color.Red,
-            color = Color.White
+            color = Color.White,
+            modifier = Modifier.width(200.dp).height(70.dp),
+            fontSize = 20.sp
         ){
             navController.navigate("First/${id}")
         }

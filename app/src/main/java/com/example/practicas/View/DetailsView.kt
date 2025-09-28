@@ -1,9 +1,15 @@
 package com.example.practicas.View
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
@@ -13,15 +19,23 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.example.practicas.Components.MainButton
+import com.example.practicas.Components.MainButtonDos
 import com.example.practicas.Components.MainIconButton
 import com.example.practicas.Components.Space
 import com.example.practicas.Components.TextView
 import com.example.practicas.Components.TitleBar
+import com.example.practicas.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -30,7 +44,7 @@ fun DetailsView(navController: NavController,id:Int){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
-                title = { TitleBar("DetailsView") },
+                title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Blue
                 )
@@ -49,21 +63,90 @@ fun DetailsView(navController: NavController,id:Int){
 
 @Composable
 fun ContentDetailView(navController: NavController,id: Int) {
-    Column(
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.End
+    ){
+        Text(text = "SELECT A TEAM BELOW",
+            fontSize = 20.sp,
+            color = Color.Gray,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(top = 120.dp))
+    }
+    Column (
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.Start
+    ) {
+        Row {
+            Image(
+                painter = painterResource(id = R.drawable.a),
+                contentDescription = "AFC",
+                modifier = Modifier
+                    .size(270.dp)
+                    .padding(top = 170.dp)
+                    .padding(start = 10.dp),
+                )
+            Text(
+                text = "AFC",
+                fontSize = 50.sp,
+                color = Color.Black,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                modifier = Modifier.padding(top = 200.dp)
+            )
+        }
+        Row (){
+            Text(
+                text = "NORTH",
+                fontSize = 20.sp,
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                modifier = Modifier
+                    .padding(top = 30.dp)
+                    .padding(start = 10.dp)
+            )
+        }
+        Row {
+            MainButtonDos(
+                name = "Baltimore Ravens",
+                backColor = Color.White,
+                pressedColor = Color.Red,
+                color = Color.Black,
+                modifier = Modifier
+                    .width(131.dp)
+                    .height(120.dp)
+                    .padding(top = 5.dp)
+                    .padding(start = 10.dp),
+                fontSize = 14.sp,
+                imageRes = R.drawable.baltimore_ravens,
+                borderColor = Color.Black,
+                borderWidth = 3.dp,
+                onClick = {
+                    navController.navigate("Detail/${id}")
+                }
+            )
+        }
+    }
+
+    /*Column(
         modifier = Modifier.fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
+        //Space(espacio = 130)
         TextView(texto="Detail View")
         Space(espacio = 20)
         TextView (texto=id.toString())
         MainButton(
             name="Return Home",
             backColor = Color.Blue,
-            color = Color.White
+            color = Color.White,
+            modifier = Modifier.width(200.dp).height(70.dp),
+            fontSize = 20.sp
         ) {
             navController.navigate("Home")
         }
-    }
+    }*/
 }
 

@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -95,17 +96,17 @@ fun MainButtonDos(
         border = BorderStroke(borderWidth, borderColor),
         modifier = modifier
     ) {
-        Column(
+        Row(
             modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            verticalAlignment = Alignment.CenterVertically
         ) {
             if (imageRes != null) {
                 Image(
                     painter = painterResource(id = imageRes),
                     contentDescription = "icono",
-                    modifier = Modifier.size(48.dp)
+                    modifier = Modifier.size(120.dp)
                 )
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.width(50.dp))
             }
 
             Text(

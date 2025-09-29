@@ -111,14 +111,46 @@ fun ContentDetailView(navController: NavController,id: Int) {
             MainButtonDos(
                 name = "Baltimore Ravens",
                 backColor = Color.White,
-                pressedColor = Color.Red,
+                pressedColor = Color.Black,
                 color = Color.Black,
                 modifier = Modifier
-                    .width(131.dp)
-                    .height(120.dp)
+                    .width(400.dp)
+                    .height(150.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
-                fontSize = 14.sp,
+                fontSize = 30.sp,
+                imageRes = R.drawable.baltimore_ravens,
+                borderColor = Color.Black,
+                borderWidth = 3.dp,
+                onClick = {
+                    navController.navigate("Detail/${id}")
+                }
+            )
+        }
+        Row (){
+            Text(
+                text = "EAST",
+                fontSize = 20.sp,
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                modifier = Modifier
+                    .padding(top = 30.dp)
+                    .padding(start = 10.dp)
+            )
+        }
+        Row {
+            MainButtonDos(
+                name = "Baltimore Ravens",
+                backColor = Color.White,
+                pressedColor = Color.Black,
+                color = Color.Black,
+                modifier = Modifier
+                    .width(400.dp)
+                    .height(150.dp)
+                    .padding(top = 5.dp)
+                    .padding(start = 10.dp),
+                fontSize = 30.sp,
                 imageRes = R.drawable.baltimore_ravens,
                 borderColor = Color.Black,
                 borderWidth = 3.dp,

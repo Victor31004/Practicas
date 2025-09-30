@@ -83,7 +83,7 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 contentDescription = "AFC",
                 modifier = Modifier
                     .size(270.dp)
-                    .padding(top = 170.dp)
+                    .padding(top = 140.dp)
                     .padding(start = 10.dp),
                 )
             Text(
@@ -92,7 +92,7 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
-                modifier = Modifier.padding(top = 200.dp)
+                modifier = Modifier.padding(top = 170.dp)
             )
         }
         Row (){
@@ -103,7 +103,7 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
                 modifier = Modifier
-                    .padding(top = 30.dp)
+                    .padding(top = 10.dp)
                     .padding(start = 10.dp)
             )
         }
@@ -116,7 +116,7 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 pressedTextColor = Color.White,
                 modifier = Modifier
                     .width(415.dp)
-                    .height(130.dp)
+                    .height(120.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
@@ -136,7 +136,7 @@ fun ContentDetailView(navController: NavController,id: Int) {
                     fontWeight = FontWeight.Bold,
                     fontStyle = FontStyle.Italic,
                     modifier = Modifier
-                        .padding(top = 15.dp)
+                        .padding(top = 10.dp)
                         .padding(start = 360.dp)
                 )
             }
@@ -149,7 +149,7 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 pressedTextColor = Color.Yellow,
                 modifier = Modifier
                     .width(415.dp)
-                    .height(130.dp)
+                    .height(120.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
@@ -161,26 +161,72 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 }
             )
         }
-    }
-
-    /*Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ){
-        //Space(espacio = 130)
-        TextView(texto="Detail View")
-        Space(espacio = 20)
-        TextView (texto=id.toString())
-        MainButton(
-            name="Return Home",
-            backColor = Color.Blue,
-            color = Color.White,
-            modifier = Modifier.width(200.dp).height(70.dp),
-            fontSize = 20.sp
-        ) {
-            navController.navigate("Home")
+        Row() {
+            Text(
+                text = "WEST",
+                fontSize = 20.sp,
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .padding(start = 10.dp)
+            )
         }
-    }*/
+        Row {
+            MainButtonDos(
+                name = "Denver Broncos",
+                backColor = Color.White,
+                pressedColor = Color(0xFFFE02400),
+                textColor = Color.Black,
+                pressedTextColor = Color(0Xfff0006A8),
+                modifier = Modifier
+                    .width(415.dp)
+                    .height(130.dp)
+                    .padding(top = 5.dp)
+                    .padding(start = 10.dp),
+                fontSize = 30.sp,
+                imageRes = R.drawable.denver_broncos,
+                borderColor = Color.Black,
+                borderWidth = 3.dp,
+                onClick = {
+                    navController.navigate("Detail/${id}")
+                }
+            )
+        }
+        Row() {
+            Text(
+                text = "SOUTH",
+                fontSize = 20.sp,
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .padding(start = 340.dp)
+            )
+        }
+        Row {
+            MainButtonDos(
+                name = "Jacksonville Jaguars",
+                backColor = Color.White,
+                pressedColor = Color(0xFFF04C736),
+                textColor = Color.Black,
+                pressedTextColor = Color(0XFFFC77204),
+                modifier = Modifier
+                    .width(415.dp)
+                    .height(120.dp)
+                    .padding(top = 5.dp)
+                    .padding(start = 10.dp),
+                fontSize = 30.sp,
+                imageRes = R.drawable.jacksonville_jaguars,
+                borderColor = Color.Black,
+                borderWidth = 3.dp,
+                onClick = {
+                    navController.navigate("Detail/${id}")
+                }
+            )
+        }
+    }
 }
 

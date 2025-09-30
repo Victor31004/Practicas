@@ -8,8 +8,9 @@ import androidx.navigation.compose.composable
 
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.practicas.View.DetailsView
+import com.example.practicas.View.AFCView
 import com.example.practicas.View.HomeView
+import com.example.practicas.View.NFCView
 
 
 @Composable
@@ -21,12 +22,11 @@ fun NavManager(){
         composable("Home"){
             HomeView(navController)
         }
-        composable("Detail/{id}",arguments =
-            listOf(navArgument("id")
-            {type= NavType.IntType })){
-            val id=it.arguments?.getInt("id")?:0
-            DetailsView(navController,id)
+        composable("AFC") {
+            AFCView(navController)
         }
-
+        composable("NFC") {
+            NFCView(navController)
+        }
     }
 }

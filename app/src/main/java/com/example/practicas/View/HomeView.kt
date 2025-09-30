@@ -45,34 +45,12 @@ fun HomeView(navController: NavController){
                 )
             )
         },
-        floatingActionButton = {
-            ActionButton()
-        },
         containerColor = Color(0xFF232870)
 
     ){
         ContentHomeView(navController)
     }
 }
-/*@Composable
-fun ContentHomeView(navController: NavController){
-    val id=10;
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        TextView("Home View")
-        Space(espacio = 20)
-        MainButton(
-            name="Detail View",
-            backColor = Color.Red,
-            color = Color.White
-        ){
-            navController.navigate("Detail/${id}")
-        }
-    }
-}*/
 
 @Composable
 fun ContentHomeView(navController: NavController) {
@@ -112,7 +90,7 @@ fun ContentHomeView(navController: NavController) {
                 fontSize = 26.sp,
                 imageRes = R.drawable.a
             ) {
-                navController.navigate("Detail/${id}")
+                navController.navigate("AFC")
             }
             MainButton(
                 name = "NFC",
@@ -122,7 +100,7 @@ fun ContentHomeView(navController: NavController) {
                 fontSize = 26.sp,
                 imageRes = R.drawable.n
             ) {
-                navController.navigate("Detail/${id}")
+                navController.navigate("NFC")
             }
 
         }

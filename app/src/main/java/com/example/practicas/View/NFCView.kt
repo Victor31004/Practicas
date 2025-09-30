@@ -2,7 +2,6 @@ package com.example.practicas.View
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -19,7 +17,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -29,24 +26,21 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.practicas.Components.MainButton
 import com.example.practicas.Components.MainButtonDos
 import com.example.practicas.Components.MainIconButton
-import com.example.practicas.Components.Space
-import com.example.practicas.Components.TextView
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun DetailsView(navController: NavController,id:Int){
+fun NFCView(navController: NavController){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFFFFF8000),
+                    containerColor = Color(0xFFF7E00CC),
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
@@ -56,13 +50,13 @@ fun DetailsView(navController: NavController,id:Int){
             )
         }
     ){
-        ContentDetailView(navController,id)
+        ContentNFCView(navController)
     }
 
 }
 
 @Composable
-fun ContentDetailView(navController: NavController,id: Int) {
+fun ContentNFCView(navController: NavController) {
     Column (
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.End
@@ -79,15 +73,15 @@ fun ContentDetailView(navController: NavController,id: Int) {
     ) {
         Row {
             Image(
-                painter = painterResource(id = R.drawable.a),
+                painter = painterResource(id = R.drawable.n),
                 contentDescription = "AFC",
                 modifier = Modifier
                     .size(270.dp)
                     .padding(top = 140.dp)
                     .padding(start = 10.dp),
-                )
+            )
             Text(
-                text = "AFC",
+                text = "NFC",
                 fontSize = 50.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
@@ -109,55 +103,55 @@ fun ContentDetailView(navController: NavController,id: Int) {
         }
         Row {
             MainButtonDos(
-                name = "Baltimore Ravens",
+                name = "Green Bay Packers",
                 backColor = Color.White,
-                pressedColor = Color(0xFFF402C5E),
+                pressedColor = Color(0xFFF29BD00),
                 textColor = Color.Black,
-                pressedTextColor = Color.White,
+                pressedTextColor = Color.Blue,
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
-                imageRes = R.drawable.baltimore_ravens,
+                imageRes = R.drawable.green_bay_packers,
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail/${id}")
+                    navController.navigate("Detail")
                 }
             )
         }
         Row() {
-                Text(
-                    text = "EAST",
-                    fontSize = 20.sp,
-                    color = Color.Gray,
-                    fontWeight = FontWeight.Bold,
-                    fontStyle = FontStyle.Italic,
-                    modifier = Modifier
-                        .padding(top = 10.dp)
-                        .padding(start = 360.dp)
-                )
-            }
+            Text(
+                text = "EAST",
+                fontSize = 20.sp,
+                color = Color.Gray,
+                fontWeight = FontWeight.Bold,
+                fontStyle = FontStyle.Italic,
+                modifier = Modifier
+                    .padding(top = 10.dp)
+                    .padding(start = 360.dp)
+            )
+        }
         Row {
             MainButtonDos(
-                name = "Miami Dolphins",
+                name = "Washington Commanders",
                 backColor = Color.White,
-                pressedColor = Color(0xFFF80F9FF),
+                pressedColor = Color(0xFFFE6DF25),
                 textColor = Color.Black,
-                pressedTextColor = Color.Yellow,
+                pressedTextColor = Color.Red,
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
-                imageRes = R.drawable.miami_dolphins,
+                imageRes = R.drawable.washington_commanders,
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail/${id}")
+                    navController.navigate("Detail")
                 }
             )
         }
@@ -175,22 +169,22 @@ fun ContentDetailView(navController: NavController,id: Int) {
         }
         Row {
             MainButtonDos(
-                name = "Denver Broncos",
+                name = "Arizona Cardinals",
                 backColor = Color.White,
-                pressedColor = Color(0xFFFE02400),
+                pressedColor = Color(0xFFF000000),
                 textColor = Color.Black,
-                pressedTextColor = Color(0Xfff0006A8),
+                pressedTextColor = Color(0XfffF56300),
                 modifier = Modifier
                     .width(415.dp)
                     .height(130.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
-                imageRes = R.drawable.denver_broncos,
+                imageRes = R.drawable.arizona_cardinals,
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail/${id}")
+                    navController.navigate("Detail")
                 }
             )
         }
@@ -208,25 +202,24 @@ fun ContentDetailView(navController: NavController,id: Int) {
         }
         Row {
             MainButtonDos(
-                name = "Jacksonville Jaguars",
+                name = "New Orleans Saints",
                 backColor = Color.White,
-                pressedColor = Color(0xFFF04C736),
+                pressedColor = Color(0xFFFFF6BE2),
                 textColor = Color.Black,
-                pressedTextColor = Color(0XFFFC77204),
+                pressedTextColor = Color(0XFFF8C492E),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
-                imageRes = R.drawable.jacksonville_jaguars,
+                imageRes = R.drawable.new_orleans_saints,
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail/${id}")
+                    navController.navigate("Detail")
                 }
             )
         }
     }
 }
-

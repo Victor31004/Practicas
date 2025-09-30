@@ -74,7 +74,8 @@ fun MainButtonDos(
     name: String,
     backColor: Color,
     pressedColor: Color,
-    color: Color,
+    textColor: Color,
+    pressedTextColor: Color,
     modifier: Modifier = Modifier,
     fontSize: TextUnit = 16.sp,
     imageRes: Int? = null,
@@ -85,12 +86,15 @@ fun MainButtonDos(
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed by interactionSource.collectIsPressedAsState()
 
+    val background = if (isPressed) pressedColor else backColor
+    val textCol = if (isPressed) pressedTextColor else textColor
+
     Button(
         onClick = onClick,
         interactionSource = interactionSource,
         colors = ButtonDefaults.buttonColors(
-            containerColor = if (isPressed) pressedColor else backColor,
-            contentColor = color
+            containerColor = background,
+            contentColor = textCol
         ),
         shape = RoundedCornerShape(16.dp),
         border = BorderStroke(borderWidth, borderColor),
@@ -113,8 +117,10 @@ fun MainButtonDos(
                 text = name,
                 fontSize = fontSize,
                 fontWeight = FontWeight.Bold,
+                color = textCol,
                 textAlign = TextAlign.Center
             )
         }
     }
 }
+

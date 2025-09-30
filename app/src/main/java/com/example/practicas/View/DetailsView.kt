@@ -46,7 +46,7 @@ fun DetailsView(navController: NavController,id:Int){
             CenterAlignedTopAppBar(
                 title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color.Blue
+                    containerColor = Color(0xFFFFF8000),
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
@@ -111,11 +111,12 @@ fun ContentDetailView(navController: NavController,id: Int) {
             MainButtonDos(
                 name = "Baltimore Ravens",
                 backColor = Color.White,
-                pressedColor = Color.Black,
-                color = Color.Black,
+                pressedColor = Color(0xFFF402C5E),
+                textColor = Color.Black,
+                pressedTextColor = Color.White,
                 modifier = Modifier
-                    .width(400.dp)
-                    .height(150.dp)
+                    .width(415.dp)
+                    .height(130.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
@@ -127,31 +128,32 @@ fun ContentDetailView(navController: NavController,id: Int) {
                 }
             )
         }
-        Row (){
-            Text(
-                text = "EAST",
-                fontSize = 20.sp,
-                color = Color.Gray,
-                fontWeight = FontWeight.Bold,
-                fontStyle = FontStyle.Italic,
-                modifier = Modifier
-                    .padding(top = 30.dp)
-                    .padding(start = 10.dp)
-            )
-        }
+        Row() {
+                Text(
+                    text = "EAST",
+                    fontSize = 20.sp,
+                    color = Color.Gray,
+                    fontWeight = FontWeight.Bold,
+                    fontStyle = FontStyle.Italic,
+                    modifier = Modifier
+                        .padding(top = 15.dp)
+                        .padding(start = 360.dp)
+                )
+            }
         Row {
             MainButtonDos(
-                name = "Baltimore Ravens",
+                name = "Miami Dolphins",
                 backColor = Color.White,
-                pressedColor = Color.Black,
-                color = Color.Black,
+                pressedColor = Color(0xFFF80F9FF),
+                textColor = Color.Black,
+                pressedTextColor = Color.Yellow,
                 modifier = Modifier
-                    .width(400.dp)
-                    .height(150.dp)
+                    .width(415.dp)
+                    .height(130.dp)
                     .padding(top = 5.dp)
                     .padding(start = 10.dp),
                 fontSize = 30.sp,
-                imageRes = R.drawable.baltimore_ravens,
+                imageRes = R.drawable.miami_dolphins,
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {

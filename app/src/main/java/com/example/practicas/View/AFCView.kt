@@ -206,7 +206,7 @@ fun contentAFCView(navController: NavController) {
                 backColor = Color.White,
                 pressedColor = Color(0xFFFB0FF66),
                 textColor = Color.Black,
-                pressedTextColor = Color(0XFFFC77204),
+                pressedTextColor = Color(0XFFFD9D19E),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)

@@ -29,6 +29,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import com.example.practicas.Components.SplashScreen
 import com.example.practicas.Navigation.NavManager
 import com.example.practicas.View.HomeView
 import com.example.practicas.ui.theme.PracticasTheme
@@ -40,7 +42,22 @@ class MainActivity : ComponentActivity() {
         setContent {
             PracticasTheme {
                 NavManager()
+                AppNavigation()
             }
+        }
+    }
+}
+
+@Composable
+fun AppNavigation(navController: NavController) {
+    // Pantalla inicial: Splash
+    SplashScreen(
+        image = painterResource(id = R.drawable.itl),
+        durationMillis = 3000
+    ) {
+        // Cuando termine el splash, navega a Home
+        navController.navigate("home") {
+            popUpTo("splash") { inclusive = true }
         }
     }
 }

@@ -20,6 +20,19 @@ import com.example.practicas.View.NFCView
 import com.example.practicas.View.New_Orleans_SaintsView
 import com.example.practicas.View.Washington_CommandersView
 
+@Composable
+fun AppNavigation(navController: NavController) {
+    // Pantalla inicial: Splash
+    SplashScreen(
+        image = painterResource(id = R.drawable.mi_logo),
+        durationMillis = 3000
+    ) {
+        // Cuando termine el splash, navega a Home
+        navController.navigate("home") {
+            popUpTo("splash") { inclusive = true }
+        }
+    }
+}
 
 @Composable
 fun NavManager(){

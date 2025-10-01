@@ -30,7 +30,6 @@ import com.example.practicas.Components.Space
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable

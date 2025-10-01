@@ -38,6 +38,8 @@ import com.example.practicas.Components.MainIconButton
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
+import androidx.compose.material.icons.filled.Home
+import com.example.practicas.Components.ActionButton
 import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -56,6 +58,15 @@ fun Green_Bay_PackersView(navController: NavController){
                         navController.navigate("NFC")
                     }
                 }
+            )
+        },
+        floatingActionButton = {
+            ActionButton(
+                onClick = { navController.navigate("Home") },
+                containerColor = Color(0xFFF203731),
+                contentColor = Color.White,
+                icon = Icons.Filled.Home,
+                contentDescription = "Home"
             )
         }
     ){
@@ -300,7 +311,7 @@ fun contentG_B_PView() {
             }
         }
         item {
-            Space(espacio = 40)
+            Space(espacio = 100)
         }
     }
 }

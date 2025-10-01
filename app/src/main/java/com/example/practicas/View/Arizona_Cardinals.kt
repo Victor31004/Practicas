@@ -38,6 +38,8 @@ import com.example.practicas.Components.MainIconButton
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
+import androidx.compose.material.icons.filled.Home
+import com.example.practicas.Components.ActionButton
 import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -56,6 +58,15 @@ fun Arizona_CardinalsView(navController: NavController){
                         navController.navigate("NFC")
                     }
                 }
+            )
+        },
+        floatingActionButton = {
+            ActionButton(
+                onClick = { navController.navigate("Home") },
+                containerColor = Color(0xFFFFFB612),
+                contentColor = Color.Black,
+                icon = Icons.Filled.Home,
+                contentDescription = "Home"
             )
         }
     ){
@@ -297,7 +308,7 @@ fun contentA_CView() {
             }
         }
         item {
-            Space(espacio = 40)
+            Space(espacio = 100)
         }
     }
 }

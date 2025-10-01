@@ -19,15 +19,25 @@ fun TitleBar(name:String){
 }
 
 @Composable
-fun ActionButton(){
-    FloatingActionButton(onClick={},
-        containerColor= Color.Red,
-        contentColor= Color.White
+fun ActionButton(
+    onClick: () -> Unit,
+    containerColor: Color = Color.Red,
+    contentColor: Color = Color.White,
+    icon: ImageVector = Icons.Default.Home,
+    contentDescription: String = "Action"
+) {
+    FloatingActionButton(
+        onClick = onClick,
+        containerColor = containerColor,
+        contentColor = contentColor
     ) {
-        Icon(imageVector = Icons.Default.Home,
-            contentDescription = "Mas")
+        Icon(
+            imageVector = icon,
+            contentDescription = contentDescription
+        )
     }
 }
+
 
 @Composable
 fun MainIconButton(icon: ImageVector, onClick: () -> Unit) {

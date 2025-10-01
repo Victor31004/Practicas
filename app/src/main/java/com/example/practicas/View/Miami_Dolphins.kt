@@ -39,6 +39,8 @@ import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.material.icons.filled.Home
+import com.example.practicas.Components.ActionButton
 import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -57,6 +59,15 @@ fun Miami_DolphinsView(navController: NavController){
                         navController.navigate("AFC")
                     }
                 }
+            )
+        },
+        floatingActionButton = {
+            ActionButton(
+                onClick = { navController.navigate("Home") },
+                containerColor = Color(0xFFF80F9FF),
+                contentColor = Color.Black,
+                icon = Icons.Filled.Home,
+                contentDescription = "Home"
             )
         }
     ){
@@ -302,7 +313,7 @@ fun contentM_DView() {
             }
         }
         item {
-            Space(espacio = 40)
+            Space(espacio = 100)
         }
     }
 }

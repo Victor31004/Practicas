@@ -39,6 +39,8 @@ import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.material.icons.filled.Home
+import com.example.practicas.Components.ActionButton
 import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -57,6 +59,15 @@ fun Denver_BroncosView(navController: NavController){
                         navController.navigate("AFC")
                     }
                 }
+            )
+        },
+        floatingActionButton = {
+            ActionButton(
+                onClick = { navController.navigate("Home") },
+                containerColor = Color(0xFFFFC4C02),
+                contentColor = Color.Black,
+                icon = Icons.Filled.Home,
+                contentDescription = "Home"
             )
         }
     ){
@@ -303,7 +314,7 @@ fun contentD_BView() {
             }
         }
         item {
-            Space(espacio = 40)
+            Space(espacio = 100)
         }
     }
 }

@@ -38,6 +38,9 @@ import com.example.practicas.Components.MainIconButton
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
+import androidx.compose.material.icons.filled.Home
+import com.example.practicas.Components.ActionButton
+import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -55,6 +58,15 @@ fun Baltimore_RavensView(navController: NavController){
                         navController.navigate("AFC")
                     }
                 }
+            )
+        },
+        floatingActionButton = {
+            ActionButton(
+                onClick = { navController.navigate("Home") },
+                containerColor = Color(0xFFF2C2E8C),
+                contentColor = Color.White,
+                icon = Icons.Filled.Home,
+                contentDescription = "Home"
             )
         }
     ){
@@ -291,6 +303,9 @@ fun contentB_RView() {
                     }
                 }
             }
+        }
+        item {
+            Space(espacio = 100)
         }
     }
 }

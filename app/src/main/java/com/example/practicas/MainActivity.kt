@@ -4,35 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.example.practicas.Components.SplashScreen
+import com.example.practicas.View.SplashScreen
 import com.example.practicas.Navigation.NavManager
-import com.example.practicas.View.HomeView
 import com.example.practicas.ui.theme.PracticasTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,22 +18,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             PracticasTheme {
                 NavManager()
-                AppNavigation()
             }
         }
     }
 }
 
-@Composable
-fun AppNavigation(navController: NavController) {
-    // Pantalla inicial: Splash
-    SplashScreen(
-        image = painterResource(id = R.drawable.itl),
-        durationMillis = 3000
-    ) {
-        // Cuando termine el splash, navega a Home
-        navController.navigate("home") {
-            popUpTo("splash") { inclusive = true }
-        }
-    }
-}

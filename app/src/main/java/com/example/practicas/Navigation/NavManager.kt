@@ -1,13 +1,15 @@
 package com.example.practicas.Navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
+import com.example.practicas.R
+import com.example.practicas.View.SplashScreen
 import com.example.practicas.View.AFCView
 import com.example.practicas.View.Arizona_CardinalsView
 import com.example.practicas.View.Baltimore_RavensView
@@ -21,25 +23,11 @@ import com.example.practicas.View.New_Orleans_SaintsView
 import com.example.practicas.View.Washington_CommandersView
 
 @Composable
-fun AppNavigation(navController: NavController) {
-    // Pantalla inicial: Splash
-    SplashScreen(
-        image = painterResource(id = R.drawable.mi_logo),
-        durationMillis = 3000
-    ) {
-        // Cuando termine el splash, navega a Home
-        navController.navigate("home") {
-            popUpTo("splash") { inclusive = true }
-        }
-    }
-}
-
-@Composable
 fun NavManager(){
     val navController = rememberNavController()
 
     NavHost(navController = navController,
-        startDestination = "Home"){
+        startDestination = "Splash"){
         composable("Home"){
             HomeView(navController)
         }
@@ -49,9 +37,20 @@ fun NavManager(){
         composable("NFC") {
             NFCView(navController)
         }
-        composable("B_R") {
-            Baltimore_RavensView(navController)
+        composable("splash_baltimore") {
+            SplashScreen(
+                image = painterResource(id = R.drawable.baltimore_ravens),
+                backgroundColor = Color(0xFF232870),
+                durationMillis = 2000
+            ) {
+                navController.navigate("B_R") {
+                    popUpTo("splash_baltimore") { inclusive = true }
+                }
+            }
         }
+
+        composable("B_R") { Baltimore_RavensView(navController) }
+
         composable("M_D") {
             Miami_DolphinsView(navController)
         }
@@ -73,5 +72,18 @@ fun NavManager(){
         composable("N_O_S") {
             New_Orleans_SaintsView(navController)
         }
+        composable("Splash") {
+            SplashScreen(
+                image = painterResource(id = R.drawable.dorado),
+                backgroundColor = Color(0xFF232870),
+                durationMillis = 3000
+            ) {
+                navController.navigate("home") {
+                    popUpTo("splash") { inclusive = true }
+                }
+            }
+
+        }
+
     }
 }

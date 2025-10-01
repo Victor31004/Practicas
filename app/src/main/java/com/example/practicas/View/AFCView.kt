@@ -118,7 +118,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("B_R")
+                        navController.navigate("splash_baltimore")
                 }
             )
         }

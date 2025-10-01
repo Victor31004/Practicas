@@ -1,7 +1,6 @@
 package com.example.practicas.Components
 
-import androidx.annotation.IdRes
-import androidx.annotation.Size
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -31,14 +30,12 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-
-
 @Composable
 fun TextView(texto:String){
     Text(text = texto,
         fontSize = 40.sp,
         fontWeight = FontWeight.Bold,
-        color = Color.Black,)
+        color = Color.Black)
 }
 
 @Composable
@@ -122,5 +119,26 @@ fun MainButtonDos(
             )
         }
     }
+}
+
+@Composable
+fun BodyText(
+    text: String,
+    fontSize: TextUnit = 16.sp,
+    color: Color = Color.Black,
+    fontWeight: FontWeight = FontWeight.Normal,
+    fontStyle: FontStyle = FontStyle.Normal,
+    textAlign: TextAlign = TextAlign.Start,
+    modifier: Modifier = Modifier
+) {
+    Text(
+        text = text,
+        fontSize = fontSize,
+        color = color,
+        fontWeight = fontWeight,
+        fontStyle = fontStyle,
+        textAlign = textAlign,
+        modifier = modifier
+    )
 }
 

@@ -40,7 +40,7 @@ fun NFCView(navController: NavController){
             CenterAlignedTopAppBar(
                 title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFFF7E00CC),
+                    containerColor = Color(0xFFF003B66),
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
@@ -105,9 +105,9 @@ fun ContentNFCView(navController: NavController) {
             MainButtonDos(
                 name = "Green Bay Packers",
                 backColor = Color.White,
-                pressedColor = Color(0xFFF29BD00),
+                pressedColor = Color(0xFFF203731),
                 textColor = Color.Black,
-                pressedTextColor = Color.Blue,
+                pressedTextColor = Color(0xFFFFFB612),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)
@@ -138,9 +138,9 @@ fun ContentNFCView(navController: NavController) {
             MainButtonDos(
                 name = "Washington Commanders",
                 backColor = Color.White,
-                pressedColor = Color(0xFFFE6DF25),
+                pressedColor = Color(0xFFF5A1414),
                 textColor = Color.Black,
-                pressedTextColor = Color.Red,
+                pressedTextColor = Color(0xFFFFFB612),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)
@@ -171,9 +171,9 @@ fun ContentNFCView(navController: NavController) {
             MainButtonDos(
                 name = "Arizona Cardinals",
                 backColor = Color.White,
-                pressedColor = Color(0xFFF000000),
+                pressedColor = Color(0xFFFFFB612),
                 textColor = Color.Black,
-                pressedTextColor = Color(0XfffF56300),
+                pressedTextColor = Color(0XFFF97233F),
                 modifier = Modifier
                     .width(415.dp)
                     .height(130.dp)
@@ -204,9 +204,9 @@ fun ContentNFCView(navController: NavController) {
             MainButtonDos(
                 name = "New Orleans Saints",
                 backColor = Color.White,
-                pressedColor = Color(0xFFFFF6BE2),
+                pressedColor = Color(0xFFF000000),
                 textColor = Color.Black,
-                pressedTextColor = Color(0XFFF8C492E),
+                pressedTextColor = Color(0XFFFC8B273),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)

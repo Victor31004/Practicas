@@ -9,6 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.practicas.View.AFCView
+import com.example.practicas.View.Baltimore_RavensView
 import com.example.practicas.View.HomeView
 import com.example.practicas.View.NFCView
 
@@ -27,6 +28,9 @@ fun NavManager(){
         }
         composable("NFC") {
             NFCView(navController)
+        }
+        composable("B_R") {
+            Baltimore_RavensView(navController)
         }
     }
 }

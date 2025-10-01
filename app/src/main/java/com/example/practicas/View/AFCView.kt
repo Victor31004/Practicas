@@ -40,7 +40,7 @@ fun AFCView(navController: NavController){
             CenterAlignedTopAppBar(
                 title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFFFFF8000),
+                    containerColor = Color(0xFFFCE1126),
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
@@ -105,7 +105,7 @@ fun contentAFCView(navController: NavController) {
             MainButtonDos(
                 name = "Baltimore Ravens",
                 backColor = Color.White,
-                pressedColor = Color(0xFFF402C5E),
+                pressedColor = Color(0xFFF2C2E8C),
                 textColor = Color.Black,
                 pressedTextColor = Color.White,
                 modifier = Modifier
@@ -118,7 +118,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("B_R")
                 }
             )
         }
@@ -140,7 +140,7 @@ fun contentAFCView(navController: NavController) {
                 backColor = Color.White,
                 pressedColor = Color(0xFFF80F9FF),
                 textColor = Color.Black,
-                pressedTextColor = Color.Yellow,
+                pressedTextColor = Color(0xFFFFF6700),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)
@@ -171,7 +171,7 @@ fun contentAFCView(navController: NavController) {
             MainButtonDos(
                 name = "Denver Broncos",
                 backColor = Color.White,
-                pressedColor = Color(0xFFFE02400),
+                pressedColor = Color(0xFFFFC4C02),
                 textColor = Color.Black,
                 pressedTextColor = Color(0Xfff0006A8),
                 modifier = Modifier
@@ -204,9 +204,9 @@ fun contentAFCView(navController: NavController) {
             MainButtonDos(
                 name = "Jacksonville Jaguars",
                 backColor = Color.White,
-                pressedColor = Color(0xFFFB0FF66),
+                pressedColor = Color(0xFFF006778),
                 textColor = Color.Black,
-                pressedTextColor = Color(0XFFFD9D19E),
+                pressedTextColor = Color(0XFFFD7A22A),
                 modifier = Modifier
                     .width(415.dp)
                     .height(120.dp)

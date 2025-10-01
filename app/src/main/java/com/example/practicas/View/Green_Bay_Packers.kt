@@ -53,7 +53,7 @@ fun Green_Bay_PackersView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("NFC")
                     }
                 }
             )

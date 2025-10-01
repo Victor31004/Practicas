@@ -53,7 +53,7 @@ fun Washington_CommandersView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("NFC")
                     }
                 }
             )

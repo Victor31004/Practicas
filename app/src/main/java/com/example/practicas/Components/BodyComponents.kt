@@ -39,14 +39,6 @@ import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 
 @Composable
-fun TextView(texto:String){
-    Text(text = texto,
-        fontSize = 40.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.Black)
-}
-
-@Composable
 fun Space(espacio:Int){
     Spacer(modifier = Modifier.height(espacio.dp))
 }

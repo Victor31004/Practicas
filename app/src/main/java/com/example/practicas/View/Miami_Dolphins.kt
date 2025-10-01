@@ -54,7 +54,7 @@ fun Miami_DolphinsView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("AFC")
                     }
                 }
             )

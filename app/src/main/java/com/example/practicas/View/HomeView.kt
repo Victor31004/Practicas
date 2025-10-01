@@ -27,7 +27,6 @@ import androidx.navigation.Navigator
 import com.example.practicas.Components.ActionButton
 import com.example.practicas.Components.MainButton
 import com.example.practicas.Components.Space
-import com.example.practicas.Components.TextView
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 

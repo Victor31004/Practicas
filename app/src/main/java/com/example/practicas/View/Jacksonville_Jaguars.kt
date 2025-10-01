@@ -53,7 +53,7 @@ fun Jacksonville_JaguarsView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("AFC")
                     }
                 }
             )

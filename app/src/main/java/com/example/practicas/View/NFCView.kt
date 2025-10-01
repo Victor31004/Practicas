@@ -44,7 +44,7 @@ fun NFCView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("Home")
                     }
                 }
             )
@@ -118,7 +118,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("GB_P")
+                    navController.navigate("splash_GreenBayPackers")
                 }
             )
         }
@@ -151,7 +151,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("W_C")
+                    navController.navigate("splash_WashingtonCommanders")
                 }
             )
         }
@@ -184,7 +184,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("A_C")
+                    navController.navigate("splash_ArizonaCardinals")
                 }
             )
         }
@@ -217,7 +217,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("N_O_S")
+                    navController.navigate("splash_NewOrleansSaints")
                 }
             )
         }

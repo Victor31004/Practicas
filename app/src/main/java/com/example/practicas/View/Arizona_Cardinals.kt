@@ -53,7 +53,7 @@ fun Arizona_CardinalsView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("NFC")
                     }
                 }
             )

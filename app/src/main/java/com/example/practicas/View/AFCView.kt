@@ -44,7 +44,7 @@ fun AFCView(navController: NavController){
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
-                        navController.popBackStack()
+                        navController.navigate("Home")
                     }
                 }
             )
@@ -151,7 +151,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("M_D")
+                    navController.navigate("splash_MiamiDolphins")
                 }
             )
         }
@@ -184,7 +184,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("D_B")
+                    navController.navigate("splash_DenverBroncos")
                 }
             )
         }
@@ -217,7 +217,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("JV_J")
+                    navController.navigate("splash_JacksonvilleJaguars")
                 }
             )
         }

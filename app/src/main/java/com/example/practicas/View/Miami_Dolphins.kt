@@ -38,17 +38,19 @@ import com.example.practicas.Components.MainIconButton
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Spacer
+import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun Baltimore_RavensView(navController: NavController){
+fun Miami_DolphinsView(navController: NavController){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFFF2C2E8C),
+                    containerColor = Color(0xFFF80F9FF),
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
@@ -58,21 +60,24 @@ fun Baltimore_RavensView(navController: NavController){
             )
         }
     ){
-        contentB_RView()
+        contentM_DView()
     }
 
 }
 
 @Composable
-fun contentB_RView() {
+fun contentM_DView() {
     Column {
+        Box() {
             Image(
-                painter = painterResource(id = R.drawable.baltimore_ravens),
-                contentDescription = "BalRav",
+                painter = painterResource(id = R.drawable.miami_dolphins),
+                contentDescription = "MiaDol",
                 modifier = Modifier
-                    .size(700.dp)
+                    .size(500.dp)
                     .alpha(0.5f)
+                    .padding(top = 150.dp)
             )
+        }
     }
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -80,7 +85,7 @@ fun contentB_RView() {
     ) {
         item {
             BodyText(
-                text = "EST. 1996",
+                text = "EST. 1966",
                 fontSize = 30.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
@@ -90,9 +95,9 @@ fun contentB_RView() {
         }
         item {
             BodyText(
-                text = "BALTIMORE",
+                text = "MIAMI",
                 fontSize = 50.sp,
-                color = Color(0xFF2C2E8C),
+                color = Color(0xFFF80F9FF),
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
                 modifier = Modifier.padding(top = 5.dp, start = 20.dp)
@@ -100,12 +105,12 @@ fun contentB_RView() {
         }
         item {
             BodyText(
-                text = "RAVENS",
+                text = "DOLPHINS",
                 fontSize = 50.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
-                modifier = Modifier.padding(top = 175.dp, start = 220.dp)
+                modifier = Modifier.padding(top = 175.dp, start = 170.dp)
             )
         }
         item {
@@ -120,7 +125,11 @@ fun contentB_RView() {
         }
         item {
             BodyText(
-                text = "El nombre del equipo actual se inspiró en el famoso poema de Edgar Allan Poe \"El cuervo\", que se redactó en Baltimore, Maryland.",
+                text = "Los Dolphins de 1972 son el único equipo de la" +
+                        " historia de la NFL en registrar una temporada" +
+                        " perfecta. Hasta el día de hoy, ningún otro equipo" +
+                        " se ha mantenido invicto tanto en la temporada" +
+                        " regular como en los playoffs en una sola temporada. ",
                 fontSize = 20.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Normal,
@@ -139,7 +148,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0xFFFFF6700), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -149,7 +158,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                         ) {
                             BodyText(
-                                text = "M&T Bank Stadium",
+                                text = "Estadio Hard Rock",
                                 fontSize = 25.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -158,7 +167,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 10.dp)
                             )
                             BodyText(
-                                text = "Baltimore, MD",
+                                text = "Miami Gardens, FL",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Normal,
@@ -167,7 +176,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 40.dp)
                             )
                             BodyText(
-                                text = "Año de construcción: 1998",
+                                text = "Año de construcción: 1987",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -176,7 +185,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 70.dp)
                             )
                             BodyText(
-                                text = "Capacidad: 71,008",
+                                text = "Capacidad: 65,326",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -185,7 +194,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 100.dp)
                             )
                             BodyText(
-                                text = "Superficie: Grama ",
+                                text = "Superficie: Pasto azul de Kentucky",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -200,7 +209,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0xFFFFF6700), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -209,7 +218,7 @@ fun contentB_RView() {
                                 .padding(20.dp)
                         ){
                             Image(
-                                painter = painterResource(id = R.drawable.estadio_br),
+                                painter = painterResource(id = R.drawable.estadiomd),
                                 contentDescription = "EstadioBalRav",
                                 modifier = Modifier
                                     .size(1000.dp)
@@ -221,7 +230,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0xFFFFF6700), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -240,7 +249,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 10.dp)
                             )
                             BodyText(
-                                text = "Baltimore, MD",
+                                text = "Miami, FL",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Normal,
@@ -258,7 +267,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 70.dp)
                             )
                             BodyText(
-                                text = "569,931 (2022)",
+                                text = "449,514 (2022)",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Normal,
@@ -273,7 +282,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0xFFFFF6700), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -282,7 +291,7 @@ fun contentB_RView() {
                                 .padding(20.dp)
                         ){
                             Image(
-                                painter = painterResource(id = R.drawable.ciudadbr),
+                                painter = painterResource(id = R.drawable.ciudadmd),
                                 contentDescription = "CiudadBalRav",
                                 modifier = Modifier
                                     .size(1000.dp)
@@ -291,6 +300,9 @@ fun contentB_RView() {
                     }
                 }
             }
+        }
+        item {
+            Space(espacio = 40)
         }
     }
 }

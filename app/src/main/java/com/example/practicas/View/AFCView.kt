@@ -151,7 +151,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("M_D")
                 }
             )
         }
@@ -184,7 +184,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("D_B")
                 }
             )
         }
@@ -217,7 +217,7 @@ fun contentAFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("JV_J")
                 }
             )
         }

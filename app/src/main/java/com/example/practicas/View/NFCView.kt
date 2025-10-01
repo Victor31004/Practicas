@@ -118,7 +118,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("GB_P")
                 }
             )
         }
@@ -151,7 +151,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("W_C")
                 }
             )
         }
@@ -184,7 +184,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("A_C")
                 }
             )
         }
@@ -217,7 +217,7 @@ fun ContentNFCView(navController: NavController) {
                 borderColor = Color.Black,
                 borderWidth = 3.dp,
                 onClick = {
-                    navController.navigate("Detail")
+                    navController.navigate("N_O_S")
                 }
             )
         }

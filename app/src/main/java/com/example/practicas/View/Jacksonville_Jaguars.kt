@@ -38,17 +38,18 @@ import com.example.practicas.Components.MainIconButton
 import com.example.practicas.Components.TitleBar
 import com.example.practicas.R
 import androidx.compose.foundation.background
+import com.example.practicas.Components.Space
 
 @OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun Baltimore_RavensView(navController: NavController){
+fun Jacksonville_JaguarsView(navController: NavController){
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = { TitleBar(" ") },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = Color(0xFFF2C2E8C),
+                    containerColor = Color(0xFFF006778),
                 )
                 ,navigationIcon= {
                     MainIconButton(icon = Icons.Default.ArrowBack) {
@@ -58,21 +59,22 @@ fun Baltimore_RavensView(navController: NavController){
             )
         }
     ){
-        contentB_RView()
+        contentJV_JView()
     }
 
 }
 
 @Composable
-fun contentB_RView() {
+fun contentJV_JView() {
     Column {
-            Image(
-                painter = painterResource(id = R.drawable.baltimore_ravens),
-                contentDescription = "BalRav",
-                modifier = Modifier
-                    .size(700.dp)
-                    .alpha(0.5f)
-            )
+        Image(
+            painter = painterResource(id = R.drawable.jacksonville_jaguars),
+            contentDescription = "BalRav",
+            modifier = Modifier
+                .size(470.dp)
+                .alpha(0.5f)
+                .padding(top = 240.dp)
+        )
     }
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -80,7 +82,7 @@ fun contentB_RView() {
     ) {
         item {
             BodyText(
-                text = "EST. 1996",
+                text = "EST. 1995",
                 fontSize = 30.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
@@ -90,9 +92,9 @@ fun contentB_RView() {
         }
         item {
             BodyText(
-                text = "BALTIMORE",
+                text = "JACKSONVILLE",
                 fontSize = 50.sp,
-                color = Color(0xFF2C2E8C),
+                color = Color(0xFFF006778),
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
                 modifier = Modifier.padding(top = 5.dp, start = 20.dp)
@@ -100,12 +102,12 @@ fun contentB_RView() {
         }
         item {
             BodyText(
-                text = "RAVENS",
+                text = "JAGUARS",
                 fontSize = 50.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Bold,
                 fontStyle = FontStyle.Italic,
-                modifier = Modifier.padding(top = 175.dp, start = 220.dp)
+                modifier = Modifier.padding(top = 175.dp, start = 190.dp)
             )
         }
         item {
@@ -120,7 +122,11 @@ fun contentB_RView() {
         }
         item {
             BodyText(
-                text = "El nombre del equipo actual se inspiró en el famoso poema de Edgar Allan Poe \"El cuervo\", que se redactó en Baltimore, Maryland.",
+                text = "En 1995, los Jacksonville Jaguars se convirtieron" +
+                        " en el primer equipo de expansión en la historia" +
+                        " de la liga en registrar un récord divisional de" +
+                        " 0.500 o mejor en su primera temporada, terminando" +
+                        " 4-4 contra sus rivales de la AFC Central. ",
                 fontSize = 20.sp,
                 color = Color.Black,
                 fontWeight = FontWeight.Normal,
@@ -139,7 +145,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0XFFFD7A22A), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -149,7 +155,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                         ) {
                             BodyText(
-                                text = "M&T Bank Stadium",
+                                text = "Campo del banco TIAA",
                                 fontSize = 25.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -158,7 +164,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 10.dp)
                             )
                             BodyText(
-                                text = "Baltimore, MD",
+                                text = "Jacksonville, FL",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Normal,
@@ -167,7 +173,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 40.dp)
                             )
                             BodyText(
-                                text = "Año de construcción: 1998",
+                                text = "Año de construcción: 1995",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -176,7 +182,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 70.dp)
                             )
                             BodyText(
-                                text = "Capacidad: 71,008",
+                                text = "Capacidad: 67,164",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Bold,
@@ -200,7 +206,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0XFFFD7A22A), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -209,8 +215,8 @@ fun contentB_RView() {
                                 .padding(20.dp)
                         ){
                             Image(
-                                painter = painterResource(id = R.drawable.estadio_br),
-                                contentDescription = "EstadioBalRav",
+                                painter = painterResource(id = R.drawable.estadiojvj),
+                                contentDescription = "EstadioJVJ",
                                 modifier = Modifier
                                     .size(1000.dp)
                             )
@@ -221,7 +227,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0XFFFD7A22A), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -240,7 +246,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 10.dp)
                             )
                             BodyText(
-                                text = "Baltimore, MD",
+                                text = "Jacksonville, FL",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Normal,
@@ -258,7 +264,7 @@ fun contentB_RView() {
                                 modifier = Modifier.padding(top = 70.dp)
                             )
                             BodyText(
-                                text = "569,931 (2022)",
+                                text = "971,319 (2022)",
                                 fontSize = 20.sp,
                                 color = Color.Black,
                                 fontWeight = FontWeight.Normal,
@@ -273,7 +279,7 @@ fun contentB_RView() {
                                 .padding(start = 10.dp)
                                 .height(200.dp)
                                 .width(400.dp)
-                                .background(Color(0xFFF2463E0), shape = RoundedCornerShape(16.dp))
+                                .background(Color(0XFFFD7A22A), shape = RoundedCornerShape(16.dp))
                                 .border(
                                     width = 3.dp,
                                     color = Color.Black,
@@ -282,7 +288,7 @@ fun contentB_RView() {
                                 .padding(20.dp)
                         ){
                             Image(
-                                painter = painterResource(id = R.drawable.ciudadbr),
+                                painter = painterResource(id = R.drawable.ciudadjvj),
                                 contentDescription = "CiudadBalRav",
                                 modifier = Modifier
                                     .size(1000.dp)
@@ -291,6 +297,9 @@ fun contentB_RView() {
                     }
                 }
             }
+        }
+        item {
+            Space(espacio = 40)
         }
     }
 }
